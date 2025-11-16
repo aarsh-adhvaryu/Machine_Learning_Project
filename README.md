@@ -3,7 +3,7 @@
 This project performs end-to-end analysis of therapeutic failures reported in the FDA Adverse Event Reporting System (FAERS).
 It combines NLP-based clustering and machine learning classification to discover hidden phenotypes, label failure cases, and build a predictive model for real-world deployment.
 
-<h3> Project Overview </h3> 
+<h3> **Project Overview** </h3> 
 
 The end-to-end pipeline consists of:
 
@@ -16,7 +16,7 @@ The end-to-end pipeline consists of:
 - Final Real-World Evaluation
 - Exported Artifacts for Deployment
 
-<h4> 1. Data Preprocessing</h4>
+<h4> **1. Data Preprocessing**</h4>
 
 FAERS quarterly datasets (Drug, Reaction, Outcome tables) were merged and cleaned.
 Key preprocessing steps:
@@ -28,7 +28,7 @@ Key preprocessing steps:
 - Extract clean text from all_reaction_pts
 
 
-<h4> 2. Unsupervised Discovery of Failure Phenotypes (Clustering) </h4>
+<h4> **2. Unsupervised Discovery of Failure Phenotypes (Clustering)** </h4>
 
 We cluster failure cases using NLP-based representation:
 - Text Embedding Pipeline
@@ -42,7 +42,7 @@ We cluster failure cases using NLP-based representation:
 - Searched K = 2 to 6 using silhouette score
 - Optimal or forced K = 3
 
-<h5>Discovered Phenotypes (Clusters)</h5>
+<h5>**Discovered Phenotypes (Clusters)**</h5>
 
 | Cluster   | Meaning                                                                     |
 | --------- | --------------------------------------------------------------------------- |
@@ -52,7 +52,7 @@ We cluster failure cases using NLP-based representation:
 
 
 
-<h4>3. Classification Feature Engineering</h4>
+<h4>**3. Classification Feature Engineering**</h4>
 
 Dropped non-predictive identifiers:
 primaryid, caseid, caseversion, fda_dt_parsed, all_reaction_pts, severity fields
@@ -66,7 +66,7 @@ Features were scaled using StandardScaler.
 - label_encoder.joblib
 - training_feature_names.joblib
 
-<h4>4. Imbalanced Learning Pipeline</h4>
+<h4>**4. Imbalanced Learning Pipeline**</h4>
 
 To avoid data leakage, only the training split was balanced.
 
@@ -81,7 +81,7 @@ Saved artifacts:
 - X_test.joblib
 - y_test.joblib
 
-<h4> 5. Baseline Model Evaluation (Untuned)</h4>
+<h4> **5. Baseline Model Evaluation (Untuned)**</h4>
 
 Trained on balanced data, tested on untouched test split.
 Models evaluated:
@@ -97,7 +97,7 @@ untuned_model_scores.csv
 
 The top 5 models were automatically selected for tuning.
 
-<h4> 6. Grid Search Optimization</h4>
+<h4> **6. Grid Search Optimization**</h4>
 
 A optimized grid search was run on:
 -Logistic Regression
@@ -123,7 +123,7 @@ LightGBM (Tuned)
 Saved as:
 - best_classifier_final.joblib
 
-<h4>7. Final Real-World Evaluation</h4>
+<h4>**7. Final Real-World Evaluation**</h4>
 Evaluated tuned model on unseen, real-world FAERS data:
 Final Score:
 - Accuracy: 0.9601
