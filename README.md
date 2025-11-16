@@ -3,6 +3,13 @@
 This project performs end-to-end analysis of therapeutic failures reported in the FDA Adverse Event Reporting System (FAERS).
 It combines NLP-based clustering and machine learning classification to discover hidden phenotypes, label failure cases, and build a predictive model for real-world deployment.
 
+**Group Name: DataCraft**
+**Group Members:**
+Aarsh Adhvaryu : 202518031
+Harsh Jethwani : 202518055
+Ojas Gupta     : 202518057
+Ram Sharma     : 202518009
+
 **DATASET URL:** https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html
 
 **<h3>Project Overview</h3>**
