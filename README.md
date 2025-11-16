@@ -5,7 +5,7 @@ It combines NLP-based clustering and machine learning classification to discover
 
 
 **Group Name: DataCraft**
-<br>
+
 **Group Members:**
 - Aarsh Adhvaryu : 202518031
 - Harsh Jethwani : 202518055
