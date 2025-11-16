@@ -3,7 +3,7 @@
 This project performs end-to-end analysis of therapeutic failures reported in the FDA Adverse Event Reporting System (FAERS).
 It combines NLP-based clustering and machine learning classification to discover hidden phenotypes, label failure cases, and build a predictive model for real-world deployment.
 
-<h3> **Project Overview** </h3> 
+**<h3>Project Overview</h3>**
 
 The end-to-end pipeline consists of:
 
